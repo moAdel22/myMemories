@@ -46,7 +46,7 @@ export const likePost=async(req,res)=>{
     const {id}=req.params;
     if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send('no post with this id')
     const post=await postMessage.findById(id)
-    const updatedPost=await postMessage.findByIdAndUpdate(id,{likeCount:post.likeCount==0?post.likeCount+1:post.likeCount-1},{new:true}) //esthbal kda 3shan mfesh authontication 
+    const updatedPost=await postMessage.findByIdAndUpdate(id,{likeCount:post.likeCount==0?post.likeCount+1:post.likeCount-1},{new:true}) //just mock  
     res.json(updatedPost)
 }
 
