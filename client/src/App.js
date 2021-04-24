@@ -1,9 +1,9 @@
 import React from 'react'
 import {Container,Typography,Grow,Grid} from '@material-ui/core'
 import {useDispatch} from 'react-redux'
-import {useEffect,useState} from 'react'
+import {useEffect} from 'react'
 import {getPosts} from './actions/posts'
-
+import {useState} from 'react'
 
 
 import memories from './images/memories22.png'
