@@ -22,7 +22,6 @@ app.get('/',(req,res)=>{
 
 
 
-// const CONNECTION_URL='mongodb+srv://adolninja:test1234@nodetuts.u3fgr.mongodb.net/memoriesProject?retryWrites=true&w=majority'
 const PORT= process.env.PORT;
 mongoose.connect(process.env.CONNECTION_URL,{useNewUrlParser:true,useUnifiedTopology:true})
     .then (()=>app.listen(PORT,()=>console.log(`Server running on port: ${PORT}`)))
